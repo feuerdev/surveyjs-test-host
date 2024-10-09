@@ -1,0 +1,64 @@
+{
+  "logoWidth": "0px",
+  "logoHeight": "0px",
+  "logoFit": "none",
+  "pages": [
+    {
+      "name": "disclaimer",
+      "readOnly": true,
+      "title": "Welcome to Ada. Here are a few things to know about this COVID-19 risk status and treatment options questionnaire.",
+      "elements": [
+        {
+          "type": "html",
+          "name": "question8",
+          "html": "    <div class=\"sc-hZgfyJ cKVjnj\"><strong>Ada &amp; Pfizer</strong></div>\n    <div class=\"sc-hZgfyJ cKVjnj\"\n      >Pfizer Inc. (“Pfizer”), which manufactures and sells oral prescription\n      medication for COVID-19, has contracted with Ada Health Inc. (“Ada”) for\n      the development, hosting and operation of this questionnaire. Pfizer has\n      no involvement in the onward journey following the questionnaire.</div\n    >\n    <div class=\"sc-hZgfyJ cKVjnj\"><strong>Privacy</strong></div>\n    <div class=\"sc-hZgfyJ cKVjnj\"\n      >Pfizer will not receive any personal information relating to respondents\n      or any of your individual responses. Ada will share with Pfizer only\n      aggregated information related to responses to this questionnaire.</div\n    >\n    <div class=\"sc-hZgfyJ cKVjnj\"><strong>Age requirements</strong></div>\n    <div class=\"sc-hZgfyJ cKVjnj\"\n      >This questionnaire is only for US residents aged 18 or over.</div\n    >\n    <div class=\"sc-hZgfyJ cKVjnj\"><strong>Safety</strong></div>\n    <div class=\"sc-hZgfyJ cKVjnj\"\n      >All guidance and recommendations follow current CDC and FDA\n      guidelines.</div\n    >\n    <div class=\"sc-hZgfyJ cKVjnj\"\n      >If you have health concerns, talk to your healthcare professional. In a\n      medical emergency, call 911.</div\n    >\n    <div class=\"sc-hZgfyJ cKVjnj\"><strong>Intended use</strong></div>\n    <div class=\"sc-hZgfyJ cKVjnj\"\n      >This questionnaire is intended to educate individuals about whether they\n      meet current criteria for high risk for progression to severe COVID-19 and\n      whether oral prescription medication for COVID-19 may be appropriate. This\n      questionnaire is not intended to influence the choice of treatment for\n      COVID-19, and Pfizer has not made or offered any payment to Ada to\n      influence the referral of patients to any Pfizer product. All decisions\n      regarding patient care must be made in consultation with a healthcare\n      professional, considering the unique characteristics of the patient.</div\n    >\n    <div class=\"sc-hZgfyJ cKVjnj\"\n      ><strong>Informational purposes only</strong></div\n    >\n    <div class=\"sc-hZgfyJ cKVjnj\"\n      >The health information contained herein is provided for educational\n      purposes only and is not intended to replace discussions with a healthcare\n      professional.</div\n    >\n"
+        }
+      ]
+    },
+    {
+      "name": "Consent",
+      "elements": [
+        {
+          "type": "checkbox",
+          "name": "ConsentQuestion",
+          "title": "Your data and privacy",
+          "description": "This questionnaire is by Ada Health, Inc. and is intended only for people based in the USA. To continue, read Ada's privacy policy and confirm the following declarations.",
+          "hideNumber": true,
+          "validators": [
+            {
+              "type": "expression",
+              "text": "Select all checkboxes please!",
+              "expression": "{ConsentQuestion} allof ['Item 1', 'Item 2']"
+            }
+          ],
+          "choices": [
+            {
+              "value": "Item 1",
+              "text": "I agree to [Ada's privacy policy](https://link-url-here.org)and confirm that I am a US resident and at least 18 years old."
+            },
+            {
+              "value": "Item 2",
+              "text": "I agree to [Ada's other policies](https://link-url-here.org)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "page3",
+      "elements": [
+        {
+          "type": "html",
+          "name": "question7",
+          "html": "ssfd fsdfsdf dsf dsf dsf dsf dsf dsf dsffdsdfsdfdsf"
+        }
+      ]
+    }
+  ],
+  "showTitle": false,
+  "showCompletedPage": false,
+  "progressBarInheritWidthFrom": "survey",
+  "pageNextText": "Continue",
+  "questionsOnPageMode": "questionPerPage",
+  "widthMode": "responsive"
+}
