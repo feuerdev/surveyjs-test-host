@@ -1,0 +1,25 @@
+{
+  "logoWidth": "0px",
+  "logoHeight": "0px",
+  "logoFit": "none",
+  "pages": [
+    {
+      "name": "disclaimer",
+      "readOnly": true,
+      "title": "Welcome to another Questionnaire.",
+      "elements": [
+        {
+          "type": "html",
+          "name": "question8",
+          "html": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nunc nec</p>"
+        }
+      ]
+    }
+  ],
+  "showTitle": false,
+  "showCompletedPage": false,
+  "progressBarInheritWidthFrom": "survey",
+  "pageNextText": "Continue",
+  "questionsOnPageMode": "questionPerPage",
+  "widthMode": "responsive"
+}

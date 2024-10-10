@@ -17,27 +17,27 @@
     },
     {
       "name": "Consent",
+      "title": "Your data and privacy",
       "elements": [
         {
           "type": "checkbox",
           "name": "ConsentQuestion",
-          "title": "Your data and privacy",
-          "description": "This questionnaire is by Ada Health, Inc. and is intended only for people based in the USA. To continue, read Ada's privacy policy and confirm the following declarations.",
+          "title": "This questionnaire is by Ada Health, Inc. and is intended only for people based in the USA. To continue, read Ada's privacy policy and confirm the following declarations.",
           "hideNumber": true,
           "validators": [
             {
               "type": "expression",
               "text": "Select all checkboxes please!",
-              "expression": "{ConsentQuestion} allof ['Item 1', 'Item 2']"
+              "expression": "{ConsentQuestion} allof ['Consent1', 'Consent2']"
             }
           ],
           "choices": [
             {
-              "value": "Item 1",
+              "value": "Consent1",
               "text": "I agree to [Ada's privacy policy](https://link-url-here.org)and confirm that I am a US resident and at least 18 years old."
             },
             {
-              "value": "Item 2",
+              "value": "Consent2",
               "text": "I agree to [Ada's other policies](https://link-url-here.org)."
             }
           ]
@@ -45,18 +45,79 @@
       ]
     },
     {
-      "name": "page3",
+      "name": "Question 1",
+      "title": "Thanks! Now let's check if you meet the current criteria for high risk for progression to severe COVID-19.",
       "elements": [
         {
-          "type": "html",
-          "name": "question7",
-          "html": "ssfd fsdfsdf dsf dsf dsf dsf dsf dsf dsffdsdfsdfdsf"
+          "type": "radiogroup",
+          "name": "AgeQuestion",
+          "title": "How old are you?",
+          "choices": [
+            {
+              "value": "Item 1",
+              "text": "18 to 29 years old"
+            },
+            {
+              "value": "Item 2",
+              "text": "30 to 39 years old"
+            },
+            {
+              "value": "Item 3",
+              "text": "40 to 49 years old"
+            },
+            {
+              "value": "Item 4",
+              "text": "50 to 64 years old"
+            },
+            {
+              "value": "Item 5",
+              "text": "65 years or older"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "page1",
+      "visibleIf": "{AgeQuestion} = 'Item 1'",
+      "title": "Optional Page only displayed when Age is young",
+      "elements": [
+        {
+          "type": "text",
+          "name": "question1",
+          "title": "Why are you so young?"
+        }
+      ]
+    },
+    {
+      "name": "page2",
+      "visibleIf": "{AgeQuestion} = 'Item 5'",
+      "title": "Optional Question only displayed when Age is old",
+      "elements": [
+        {
+          "type": "text",
+          "name": "question3",
+          "title": "Why are you so old?"
+        }
+      ]
+    },
+    {
+      "name": "page3",
+      "title": "Other random question",
+      "elements": [
+        {
+          "type": "rating",
+          "name": "question2",
+          "title": "How do you feel on a scale of 1 to 10",
+          "rateCount": 10,
+          "rateMax": 10
         }
       ]
     }
   ],
   "showTitle": false,
   "showCompletedPage": false,
+  "showProgressBar": "auto",
   "progressBarInheritWidthFrom": "survey",
   "pageNextText": "Continue",
   "questionsOnPageMode": "questionPerPage",
